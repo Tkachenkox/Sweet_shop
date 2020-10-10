@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Form</title>
+    </head>
+    <body>
+        <a href="{{ url_for('get_list') }}">Посмотреть список изделий</a>
+        <form action="/" method="POST">
+            <div>Тип изделия: <input type="text" name="type">
+                <br>
+                <br>Цена: <input type="text" name="price">
+                <br>
+                <br>Дата изготовления: <input type="text" name="date">
+                <br>
+                <br>Срок годности: <input type="text" name="term"> дня
+                <br><br>
+            </div>
+            <div>
+                <input type="submit" value="Сохранить">
+            </div>
+        </form>
+    </body>
+</html>

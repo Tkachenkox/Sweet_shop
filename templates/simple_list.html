@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>List</title>
+    </head>
+    <body>
+        <a href="{{ url_for('index') }}"> Добавить изделие </a>
+        <h1>Список всех изделий</h1>
+        {% for ob in obs %}
+             
+             <h3>Тип: {{ob.type}}</h3>
+             <h6>Цена: {{ob.price}}</h6>
+             <h6>Дата изготовления: {{ob.date}}</h6>
+             <h6>Срок годности: {{ob.terms}}</h6>
+             
+        {% endfor %}
+        <h1>Список просроченных изделий</h1>
+        {% for ob in objs %}
+             
+             <h4 style="color: crimson;">Тип: {{ob.type}}</h3>
+             <h4 style="color: crimson;">Цена: {{ob.price}}</h6>
+             <h4 style="color: crimson;">Дата изготовления: {{ob.date}}</h6>
+             <h4 style="color: crimson;">Срок годности: {{ob.terms}}</h6>
+             
+        {% endfor %}
+        <h1>Самое дорогое изделие {{ m_p.type}} с ценой {{ m_p.price}}, дата изготовления {{m_p.date}}, срок годности {{ m_p.terms }}</h1>
+    </body>
+</html>
